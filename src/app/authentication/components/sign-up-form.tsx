@@ -30,7 +30,7 @@ const formSchema = z
   .object({
     name: z.string("Nome inválido.").trim().min(1, "Nome é obrigatório."),
     email: z.email("E-mail inválido."),
-    password: z.string("Senha inválida.").min(8, "Senha inválida."),
+    password: z.string("Senha inválida.").min(8, "Senha inválida. Min 8 caracteres."),
     passwordConfirmation: z.string("Senha inválida.").min(8, "Senha inválida."),
   })
   .refine(
